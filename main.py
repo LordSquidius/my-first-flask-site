@@ -12,6 +12,27 @@ app = Flask(
 def index():
   return render_template('index.html')
 
+@app.route('/Names')
+def lijst_template():
+  Names = ['Heinrich', 'Bock', 'Jos', 'Manstein']
+  return render_template('Usernames.html', Names=Names)
+
+@app.route('/Login')
+def login():
+  return render_template('Login.html')
+
+@app.route('/Schutzstaffel')
+def Schutzstaffel():
+  return render_template('Schutzstaffel.html')
+
+@app.route('/Signup')
+def Signup():
+  return render_template('Signup.html')
+
+@app.route('/Start')
+def Start():
+  return render_template('Start.html')
+
 if __name__ == '__main__':
   # Run the Flask app
   app.run(
